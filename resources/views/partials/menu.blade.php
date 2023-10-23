@@ -2,6 +2,8 @@
     <nav class="sidebar-nav">
 
         <ul class="nav">
+
+
             <li class="nav-item">
                 <a href="" class="nav-link">
                     <i class="nav-icon fas fa-fw fa-tachometer-alt">
@@ -10,25 +12,37 @@
                     Dashboard
                 </a>
             </li>
+
+
             @can('course_access')
             <li class="nav-item">
-                <a href="{{ route('admin.courses.index') }}" class="nav-link {{ request()->is('admin/courses') || request()->is('admin/courses/*') ? 'active' : '' }}">
+                <a href="{{ route('admin.courses.index') }}"
+                    class="nav-link {{ request()->is('admin/courses') || request()->is('admin/courses/*') ? 'active' : '' }}">
                     <i class="fas fa-gift nav-icon"></i>
                     Courses
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('admin.reports.index') }}"
+                    class="nav-link {{ request()->is('admin/reports') || request()->is('admin/reports/*') ? 'active' : '' }}">
+                    <i class="fas fa-gift nav-icon"></i>
+                    Hotspots
                 </a>
             </li>
             @endcan
             @can('lesson_access')
             <li class="nav-item">
-                <a href="{{ route('admin.lessons.index') }}" class="nav-link {{ request()->is('admin/lessons') || request()->is('admin/lessons/*') ? 'active' : '' }}">
+                <a href="{{ route('admin.lessons.index') }}"
+                    class="nav-link {{ request()->is('admin/documents') || request()->is('admin/documents/*') ? 'active' : '' }}">
                     <i class="fas fa-gift nav-icon"></i>
-                    Lesson
+                    Documents
                 </a>
             </li>
             @endcan
             @can('test_access')
             <li class="nav-item">
-                <a href="{{ route('admin.tests.index') }}" class="nav-link {{ request()->is('admin/tests') || request()->is('admin/tests/*') ? 'active' : '' }}">
+                <a href="{{ route('admin.tests.index') }}"
+                    class="nav-link {{ request()->is('admin/tests') || request()->is('admin/tests/*') ? 'active' : '' }}">
                     <i class="fas fa-gift nav-icon"></i>
                     Test
                 </a>
@@ -36,7 +50,8 @@
             @endcan
             @can('question_access')
             <li class="nav-item">
-                <a href="{{ route('admin.questions.index') }}" class="nav-link {{ request()->is('admin/questions') || request()->is('admin/questions/*') ? 'active' : '' }}">
+                <a href="{{ route('admin.questions.index') }}"
+                    class="nav-link {{ request()->is('admin/questions') || request()->is('admin/questions/*') ? 'active' : '' }}">
                     <i class="fas fa-gift nav-icon"></i>
                     Question
                 </a>
@@ -44,7 +59,8 @@
             @endcan
             @can('questions_option_access')
             <li class="nav-item">
-                <a href="{{ route('admin.question_options.index') }}" class="nav-link {{ request()->is('admin/question_options') || request()->is('admin/question_options/*') ? 'active' : '' }}">
+                <a href="{{ route('admin.question_options.index') }}"
+                    class="nav-link {{ request()->is('admin/question_options') || request()->is('admin/question_options/*') ? 'active' : '' }}">
                     <i class="fas fa-gift nav-icon"></i>
                     Question Option
                 </a>
@@ -52,7 +68,8 @@
             @endcan
             @can('user_access')
             <li class="nav-item">
-                <a href="{{ route('admin.users.index') }}" class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
+                <a href="{{ route('admin.users.index') }}"
+                    class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
                     <i class="fas fa-gift nav-icon"></i>
                     User
                 </a>
@@ -66,7 +83,7 @@
                     Logout
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="post">
-                    @csrf 
+                    @csrf
                 </form>
             </li>
         </ul>

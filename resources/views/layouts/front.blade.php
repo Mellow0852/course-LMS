@@ -16,13 +16,13 @@
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/style.css') }}" />
 
-    <title>Responsive Watches website</title>
+    <title>Crime Locator</title>
   </head>
   <body>
     <header class="header" id="header">
       <div class="nav container">
         <a href="{{ route('home') }}" class="nav-logo">
-        <i class='bx bx-compass'></i> BERAJAH
+        <i class='bx bx-compass'></i> Adanian
         </a>
 
         <div class="nav-menu" id="nav-menu">
@@ -31,7 +31,7 @@
               <a href="{{ route('home') }}" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('courses.index') }}" class="nav-link">Course</a>
+              <a href="{{ route('courses.index') }}" class="nav-link">Form</a>
             </li>
             @auth
               @if(auth()->user()->isAdmin())
@@ -133,8 +133,8 @@
         <div class="footer-content">
           <h3 class="footer-title">Our Information</h3>
           <ul class="footer-list">
-            <li>123456789</li>
-            <li>Lombok, INDONESIA</li>
+            <li>018 112 0520</li>
+            <li>crimelocate@outlook.com</li>
           </ul>
         </div>
 
@@ -145,10 +145,7 @@
               <a href="#" class="footer-link">home</a>
             </li>
             <li>
-              <a href="#" class="footer-link">course</a>
-            </li>
-            <li>
-              <a href="#" class="footer-link">categories</a>
+              <a href="#" class="footer-link">form</a>
             </li>
           </ul>
         </div>
@@ -184,7 +181,7 @@
         </div>
       </div>
 
-      <span class="footer-copy">&#169; Abdul Aziz. All rights</span>
+      <span class="footer-copy">&#169; Tumelo Molwantwa.</span>
     </footer>
 
     <a href="#" class="scroll-up" id="scroll-up">

@@ -15,10 +15,10 @@ class RoleSeeder extends Seeder
     public function run()
     {
         $items = [
-            
+
             ['id' => 1, 'title' => 'Administrator (can create other users)',],
-            ['id' => 2, 'title' => 'Teacher',],
-            ['id' => 3, 'title' => 'Student',],
+            ['id' => 2, 'title' => 'SAPS',],
+            ['id' => 3, 'title' => 'Citizenz',],
 
         ];
 
